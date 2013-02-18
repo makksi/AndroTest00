@@ -1,4 +1,4 @@
-package com.makksi.androtest;
+package com.makksi.androtest00;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

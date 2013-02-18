@@ -1,4 +1,5 @@
-package com.makksi.androtest;
+package com.makksi.androtest00;
+
 
 import android.os.Bundle;
 import android.app.Activity;
