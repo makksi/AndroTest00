@@ -3,9 +3,11 @@ package com.makksi.androtest00;
 import android.os.Bundle;
 import android.app.Activity;
 
+
+
 public class MainActivity extends Activity {
 	
-	private MyDatabaseHelper myDatabaseHelper;
+	public MyDatabaseHelper myDatabaseHelper; // sull'esempio diceva private, ma ho messo public perché dá errore
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
