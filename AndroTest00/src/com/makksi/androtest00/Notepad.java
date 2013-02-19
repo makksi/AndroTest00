@@ -1,15 +1,24 @@
 package com.makksi.androtest00;
 
-
 import android.os.Bundle;
 import android.app.Activity;
-import android.widget.Button;
+
+import android.view.View;
+import android.util.Log;
+
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Button;
+
+import java.io.Writer;
+import java.io.Reader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 // classe di tipo attivitá
-public class Notepad extends Activity {
-	
+public class Notepad extends Activity {	
     @Override
 // ridefinisco il metodo onCreate    
     public void onCreate(Bundle savedInstanceState) {
@@ -22,27 +31,28 @@ public class Notepad extends Activity {
 // contemporaneamente creo un nuovo oggetto della classe OnClickListener e lo assegno come argomento
 // del metodo setOnClickListener        
         saveButton.setOnClickListener(new View.OnClickListener(){
-        	public void OnClick(View v){
+        	@Override
+        	public void onClick(View v){
         		save("testo.txt");
         	}
         });
         Button loadButton = (Button) findViewById(R.id.loadButton);      
         loadButton.setOnClickListener(new View.OnClickListener(){
-        	public void OnClick(View v){
+        	public void onClick(View v){
         		load("testo.txt");
         	}
         });   
         Log.i("Notepad", "Directory: " + getFilesDir().getAbsolutePath());
     }
     private void save (String filename){
-    	EditText textarea = (EditText) findViewById(R.id.textarea);
-    	String text = textarea.getText().toString();
+    	EditText textArea = (EditText) findViewById(R.id.textArea);
+    	String text = textArea.getText().toString();
     	Writer writer = null;
     	try {
     		writer = new OutputStreamWriter (openFileOutput(filename,MODE_PRIVATE));
-    		writer = write (text);
+    		writer.write(text);
     		Toast.makeText(this, "Testo salvato", Toast.LENGTH_SHORT).show();
-    	}catch (TOException e) {
+    	}catch (IOException e) {
     			Log.e("Notepad", "Impossibile salvare il file", e);
     			Toast.makeText(this,"Errore",Toast.LENGTH_SHORT).show();
     	}finally {
@@ -50,12 +60,10 @@ public class Notepad extends Activity {
     			try{
     				writer.close();
     			}catch (Throwable t) {
-    			}
-    			
+    			}    			
     		}
     	}
-    }
-    
+    } 
     private void load (String filename){
     	String text;
     	Reader reader = null;
@@ -64,26 +72,27 @@ public class Notepad extends Activity {
     		StringBuffer aux = new StringBuffer();
     		char[] buf = new char[1024];
     		int len;
-    		while ((len = reader))
-    		
-    		Toast.makeText(this, "Testo salvato", Toast.LENGTH_SHORT).show();
-    	}catch (TOException e) {
-    			Log.e("Notepad", "Impossibile salvare il file", e);
-    			Toast.makeText(this,"Errore",Toast.LENGTH_SHORT).show();
+    		while ((len = reader.read(buf)) != -1){
+    			aux.append(buf, 0,len);
+    		}
+    		text=aux.toString();
+    		Toast.makeText(this, "Testo caricato", Toast.LENGTH_SHORT).show();
+    	}catch (FileNotFoundException e) {
+    		text ="";
+    		Toast.makeText(this,"Testo non trovato",Toast.LENGTH_SHORT).show();
+    	}catch (IOException e){
+    		Log.e("Notepad", "Impossibile aprire il file", e);
+    		text="";
+    		Toast.makeText(this, "Errore", Toast.LENGTH_SHORT).show();
     	}finally {
-    		if (writer != null){
+    		if (reader != null){
     			try{
-    				writer.close();
+    				reader.close();
     			}catch (Throwable t) {
     			}
-    			
     		}
     	}
+    	EditText textArea = (EditText) findViewById(R.id.textArea);
+    	textArea.setText(text);
     }    
-    	
-    }
-    private void load (){
-    	
-    }
-
 }
