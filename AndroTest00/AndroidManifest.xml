@@ -5,7 +5,9 @@
     android:versionName="1.0" >
     
     <uses-permission 
-        android:name="android.permission.READ_CONTACTS" />
+        android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission 
+        android:name="android.permission.SET_WALLPAPER" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -35,7 +37,12 @@
         <activity 
             android:name="ContactList" 
             android:label="@string/app_test">   
-        </activity>              
+        </activity>
+        <activity 
+            android:name="WallpaperChangerActivity" 
+            android:label="@string/app_test">   
+        </activity>
+        <service android:name="WallpaperChangerService" />                
     </application>
 
 </manifest>

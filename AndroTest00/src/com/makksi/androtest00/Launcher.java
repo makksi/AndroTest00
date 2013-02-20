@@ -52,7 +52,7 @@ public class Launcher extends Activity implements OnClickListener{
     	startActivity(intent3);
     	break;
     	case R.id.buttonTest4: msg="Test4";
-    	Intent intent4 = new Intent(this,Notepad.class);
+    	Intent intent4 = new Intent(this,WallpaperChangerActivity.class);
     	startActivity(intent4);
     	break;
     	case R.id.buttonTest5: msg="Test5";
