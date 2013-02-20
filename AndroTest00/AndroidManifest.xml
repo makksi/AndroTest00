@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.makksi.androtest00.ContactList"
+            android:name="com.makksi.androtest00.Launcher"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,15 +25,15 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name="SubActivity" 
+            android:name="Notepad" 
             android:label="@string/app_name">   
         </activity>
         <activity 
-            android:name="TestActivity" 
+            android:name="MainActivity" 
             android:label="@string/app_test">   
         </activity>      
         <activity 
-            android:name="TestActivity2" 
+            android:name="ContactList" 
             android:label="@string/app_test">   
         </activity>              
     </application>

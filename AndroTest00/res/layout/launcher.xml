@@ -1,0 +1,82 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/buttonTest1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest1_text"/>
+
+        <Button
+            android:id="@+id/buttonTest2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest2_text"/>
+
+        <Button
+            android:id="@+id/buttonTest3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest3_text"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/buttonTest4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest4_text"/>
+
+        <Button
+            android:id="@+id/buttonTest5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest5_text"/>
+
+        <Button
+            android:id="@+id/buttonTest6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest6_text"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/buttonTest7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest7_text"/>
+
+        <Button
+            android:id="@+id/buttonTest8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest8_text"/>
+
+        <Button
+            android:id="@+id/buttonTest9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/buttonTest9_text"/>
+    </TableRow>
+
+</TableLayout>

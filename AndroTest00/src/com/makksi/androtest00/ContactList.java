@@ -22,7 +22,7 @@ public class ContactList extends ListActivity {
         String[] projection = {Contacts._ID, Contacts.DISPLAY_NAME}; // {..} un array di due stringhe: id, nome
         String selection = null;
         String[] selectionArgs = null;
-        String sortOrder = Contacts.DISPLAY_NAME + " ASC";
+        String sortOrder = Contacts.DISPLAY_NAME + " ASC"; // sort per nome ascendente
         Cursor cursor = managedQuery(uri, projection,selection,selectionArgs,sortOrder);
         setListAdapter(new CursorAdapter(this,cursor,true){
         	@Override

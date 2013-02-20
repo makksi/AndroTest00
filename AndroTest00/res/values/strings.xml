@@ -9,5 +9,14 @@
     
     <string name="saveButtonText">Save</string>
     <string name="loadButtonText">Load</string>
-
+    
+    <string name="buttonTest1_text">Test1</string>
+    <string name="buttonTest2_text">Test2</string>
+    <string name="buttonTest3_text">Test3</string>
+    <string name="buttonTest4_text">Test4</string>
+    <string name="buttonTest5_text">Test5</string>
+    <string name="buttonTest6_text">Test6</string>
+    <string name="buttonTest7_text">Test7</string>
+    <string name="buttonTest8_text">Test8</string>
+    <string name="buttonTest9_text">Test9</string>    
 </resources>
