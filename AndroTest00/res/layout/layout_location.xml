@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical" android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <ScrollView android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TableLayout android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+      <TableRow android:padding="5dp">
+        <TextView android:text="Provider" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/provider" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dp">
+        <TextView android:text="Disponibile" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/available" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dp">
+        <TextView android:text="Abilitato" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/enabled" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dp">
+        <TextView android:text="Timestamp" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/timestamp" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dp">
+        <TextView android:text="Latitudine" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/latitude" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dp">
+        <TextView android:text="Longitudine" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/longitude" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dp">
+        <TextView android:text="Altitudine" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/altitude" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dp">
+        <TextView android:text="Velocità" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/speed" android:padding="5dp"
+          android:layout_width="wrap_content" android:layout_height="wrap_content" />
+      </TableRow>
+    </TableLayout>
+  </ScrollView>
+</LinearLayout>
