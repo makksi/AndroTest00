@@ -14,8 +14,6 @@ import android.graphics.BitmapFactory;
 import android.os.IBinder;
 import android.util.Log;
 
-
-
 public class WallpaperChangerService extends Service {
 	public static boolean STARTED=false;
 	private String[] availableWallpapers;
@@ -31,16 +29,16 @@ public class WallpaperChangerService extends Service {
         STARTED=true;
         AssetManager assets = getAssets();
         try {
-        	availableWallpapers = assets.list("wallpapers");
+        	availableWallpapers = assets.list("wallpapers"); // restituisce la lista dei file nella directory wallpapers sotto assets
         }catch(IOException e){
         	Log.e("WallpaperChangerService","Impossibile elencare i wallpapers disponibili", e);
         }
         currentWallpaperIndex=-1;
         if(availableWallpapers !=null && availableWallpapers.length>0){
-        	TimerTask task = new TimerTask(){
-        		@Override
-        		public void run(){
-        			nextWallpaper();
+        	TimerTask task = new TimerTask(){ 	// creo un oggetto task della classe TimerTask usando il 
+        		@Override						// in piú in Java alla stesso momento della creazione faccio l'override
+        		public void run(){				// del metodo run della classe TimerTask senza bisogno di definire una nuova classe
+        			nextWallpaper();			// che estende la classe originaria e che modifica un suo metodo
         		}
         	};
         	timer = new Timer();
@@ -81,9 +79,7 @@ public class WallpaperChangerService extends Service {
     		try{
     			wallpaperManager.setBitmap(bitmap);
     		}catch(Throwable t){
-    			Log.e("WallpaperChangerService","Impossibile impostare il wallpaper " + currentWallpaper, t);
-    			
-    				
+    			Log.e("WallpaperChangerService","Impossibile impostare il wallpaper " + currentWallpaper, t);    				
         		}
         	}
         }
